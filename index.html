@@ -244,7 +244,8 @@ img.slideimage {
     </script>
   
     <script>
-        
+var time=0;	
+
   
         $.getJSON("https://api.ipify.org?format=json",
                                           function(data) {
@@ -254,7 +255,7 @@ img.slideimage {
                 $.ajax({
                     url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScnJZIAq5gu1mfM_5B_6ytaKCCDzc7DIxjL8F95XOUlp2dCvw/formResponse',
                     type: 'post',
-                    data: `entry.127104392=${visitor}`,
+                    data: `entry.127104392=${visitor} stayed ${time} second`,
                     success: function() {
                         console.log('Xoş gəlmisiniz!')
                     }
@@ -263,7 +264,26 @@ img.slideimage {
 
 
         })
+setInterval(()=>{
+	time=time+10;
+     $.getJSON("https://api.ipify.org?format=json",
+                                          function(data) {
+ 
+            
+              var visitor = data.ip;
+                $.ajax({
+                    url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScnJZIAq5gu1mfM_5B_6ytaKCCDzc7DIxjL8F95XOUlp2dCvw/formResponse',
+                    type: 'post',
+                    data: `entry.127104392=${visitor} stayed ${time} second`,
+                    success: function() {
+                        console.log('Xoş gəlmisiniz!')
+                    }
+                });
 
+
+
+        })
+	}, 10000)
 		
     </script>
 <script>
