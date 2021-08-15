@@ -63,7 +63,7 @@
 		
 		<script>
 		function openNav() {
-
+			document.querySelector('.aktivbolme').style.display="none"
 
 		  document.getElementById("leftid").style.width = "100%";
 		}
@@ -72,7 +72,7 @@
 
 
 		  document.getElementById("leftid").style.width = "0";
-
+		  document.querySelector('.aktivbolme').style.display="block"
 		}
 		</script>
 
@@ -420,7 +420,7 @@ img.slideimage {
 
 }
 
-@media only screen and (min-width:500px) and (max-width:700px){
+@media only screen and (min-width:500px) and (max-width:620px){
 	.skills{
 		font-size: 0.75rem;
 	}
@@ -498,14 +498,21 @@ let mql = window.matchMedia('(max-width: 500px)');
 
 	try{
 		if(mql.matches){
+		
+		  document.querySelector('.aktivbolme').style.display="block"
 			document.getElementById('leftid').style.width='0'
 		}
+
 		document.querySelectorAll('.aktivbolme')[0].classList='qapalibolme';
 	}catch{
 		console.log('')
 	}
 	var usaq = document.querySelector('.melumatlar').children[i];
 	usaq.classList='aktivbolme'
+		document.querySelectorAll('.qapalibolme').forEach((x)=>{x.style.display="none"})
+		  document.querySelector('.aktivbolme').style.display="block"
+
+
 })
 	
 	}
