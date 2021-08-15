@@ -1,6 +1,86 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
+	<title>Document</title>
+</head>
+<body>
+	
+
+	<style>
+		body {
+		  font-family: "Lato", sans-serif;
+		}
+		
+		.sidenav {
+		  height: 100%;
+		  width: 0;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  transition: 0.5s;
+		  padding-top: 60px;
+		}
+		
+		.sidenav a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 25px;
+		  color: #818181;
+		  display: block;
+		  transition: 0.3s;
+		}
+		
+		.sidenav a:hover {
+		  color: #f1f1f1;
+		}
+		
+		.sidenav .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+		
+		@media screen and (max-height: 450px) {
+		  .sidenav {padding-top: 15px;}
+		  .sidenav a {font-size: 18px;}
+		}
+		</style>
+		
+		
+
+		
+		
+		<span  style="font-size:30px;cursor:pointer" class="gambaga" onclick="openNav()">&#9776;</span>
+		
+		<script>
+		function openNav() {
+			document.querySelector('.aktivbolme').style.display="none"
+
+		  document.getElementById("leftid").style.width = "100%";
+		}
+
+		function closeNav() {
+
+
+		  document.getElementById("leftid").style.width = "0";
+		  document.querySelector('.aktivbolme').style.display="block"
+		}
+		</script>
+
 <div class='main'>
-	<div class="lefts">
+	<div class="lefts" id="leftid">
+		<div class="gamflex">
+			<div href="javascript:void(0)" class="gambagaclose" onclick="closeNav()">&times;</div>
+		</div>
 		<img class="profsekli" src="profs.jpg">
 <div id='bolme0' class='skills'>Haqqımda</div><div id='bolme1' class='skills'>Təhsil və təcrübə</div><div id='bolme2' class='skills'>Programlaşdırma bilikləri</div><div id='bolme3' class='skills'>Portfolio</div><div id='bolme4' class='skills'>Əlavə Bacarıqlar</div><div id='bolme5' class='skills'>Dil</div></div>
 
@@ -104,25 +184,25 @@
 	<div class="evvelki">
 		<h1>Programlaşdırma</h1>
 		<br>
-		<div>Yüksək dərəcədə Problem Solving bacarığı</div>
+		<p>Yüksək dərəcədə Problem Solving bacarığı</p>
 		<br>
-		<div>Yüksək dərəcədə Axtarış bacarığı</div>
+		<p>Yüksək dərəcədə Axtarış bacarığı</p>
 		<br>
-		<div>Hər hansı bir kitabxana və ya frameworku qısa bir müddətdə öyrənmə bacarığı</div>
+		<p>Hər hansı bir kitabxana və ya frameworku qısa bir müddətdə öyrənmə bacarığı</p>
 		<br>
 		<h1>Əlavə Bacarıqlar</h1>
 		<br>
-		<div>Web design</div>
+		<p>Web design</p>
 		<br>
-		<div>Photoshop photo manipulation</div>
+		<p>Photoshop photo manipulation</p>
 		<br>
-		<div>Illustrator logo and banner design</div>
+		<p>Illustrator logo and banner design</p>
 		<br>
-		<div>Food photography</div>
+		<p>Food photography</p>
 		<br>
-		<div>Google ads management</div>
+		<p>Google ads management</p>
 		<br>
-		<div>Wordpress</div>
+		<p>Wordpress</p>
 		</div>
 
 <div class="evvelki">
@@ -277,6 +357,67 @@ img.slideimage {
 		-webkit-clip-path:inset(0 0 0 0);
 	}
   }
+  .gambaga{
+	  display: none;
+  }
+  @media only screen and (max-width:500px){
+	  .lefts{
+		  width: 0;
+	  }
+	  h1{
+		  font-size: 2rem;
+	  }
+	  .aktivbolme{
+		  width: 100%;
+	  }
+	  p{
+		  max-width: 99%;
+		  font-size: 1rem;
+	  }
+	  .gambaga{
+		  display: block;
+	  }
+	  .lefts{
+    height: 100%;
+    width: 0;
+
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 10px;
+	position: absolute;
+	z-index: 100;
+
+  }
+  .gamflex{
+	  display: flex;
+	  width: 88%;
+	  justify-content: flex-end;
+  }
+  .gambagaclose {
+    font-size: 33px;
+}
+.melumatlar{
+	width: 100%;
+}
+
+}
+
+@media only screen and (min-width:500px){
+.lefts{
+	width: 30% !important;
+}
+.aktivbolme{
+	display: block !important;
+}
+.gamflex{
+	display: none;
+}
+
+}
 </style>
  <script src=
 "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
@@ -327,8 +468,14 @@ setInterval(()=>{
     </script>
 <script>
 	function funksiya(i){
+
 		document.getElementById(`bolme${i}`).addEventListener('click', (x)=>{
+let mql = window.matchMedia('(max-width: 500px)');
+
 	try{
+		if(mql.matches){
+			document.getElementById('leftid').style.width='0'
+		}
 		document.querySelectorAll('.aktivbolme')[0].classList='qapalibolme';
 	}catch{
 		console.log('')
@@ -348,3 +495,7 @@ setInterval(()=>{
 
 
 </script>
+
+
+</body>
+</html>
