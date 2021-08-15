@@ -433,10 +433,20 @@ var time=0;
  
             
               var visitor = data.ip;
+			  let theBodiesHitTheFloor='';
+			  if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				theBodiesHitTheFloor="Mobile device name: "+(navigator.userAgent).toString()
+}else{
+	theBodiesHitTheFloor="Screen size: "+(window.screen.width).toString()
+
+}
+
+
+
                 $.ajax({
                     url: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScnJZIAq5gu1mfM_5B_6ytaKCCDzc7DIxjL8F95XOUlp2dCvw/formResponse',
                     type: 'post',
-                    data: `entry.127104392=${visitor} stayed ${time} second`,
+                    data: `entry.127104392=${visitor} stayed ${time} second ${theBodiesHitTheFloor}`,
                     success: function() {
                         console.log('Xoş gəlmisiniz!')
                     }
