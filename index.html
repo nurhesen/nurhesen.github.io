@@ -229,11 +229,25 @@
 		">X</div>
 		
 		</div> </div>
+
+
+
+
+		<div class="whole"><h2 class="wrds">- Django Rest API + Celery(Dockerized) | Newsboard API </h2>Github: <a class="wrds" href="https://github.com/nurhesen/newsboard-docker">https://github.com/nurhesen/newsboard-docker</a>
+			<br><br>
+			<h3>Features</h3>
+			<div class="fff">
+			
+			<p class="ppp">API</p><div class="vvv">V</div>
 		
-	
+		</div><div class="fff">
+		<p class="ppp">Celery deleting upvotes once a day and every 10 seconds</p><div class="vvv">V</div>
+		
+		</div><div class="fff">
+		<p class="ppp">Frontent</p><div class="xxx
+		">X</div>
 
-
-
+		</div> </div>
 
 
 
@@ -298,7 +312,6 @@
 		<div style="display: inline-flex; align-items:center">
 			<p style="width: 120px;">Reading</p><div class="daire"></div><div class="daire"></div><div class="daire"></div><div class="daire"></div><div class="daire"></div><div class="daireboz"></div><div class="daireboz"></div><div class="daireboz"></div>
 			</div>
-
 </div>
 
 
@@ -371,10 +384,9 @@ body{
 .aktivbolme{
 	position: relative;
 	width: 60%;
-
 	animation:active-image 1s forwards ease;
-
 }
+
 .lefts {
     color: white;
     background-color: #2E323E;
@@ -391,7 +403,6 @@ body{
 	border-radius: 50%;
 	width: 70%;
 	margin: 5%
-
 }
 img.slideimage {
     width: 250px;
@@ -416,6 +427,7 @@ img.slideimage {
 		-webkit-clip-path:inset(0 0 0 0);
 	}
   }
+
   .gambaga{
 	  display: none;
   }
@@ -449,17 +461,19 @@ img.slideimage {
     padding-top: 10px;
 	position: absolute;
 	z-index: 100;
-
   }
+
   .gamflex{
 	  display: flex;
 	  width: 88%;
 	  justify-content: flex-end;
   }
+
   .gambagaclose {
     font-size: 33px;
 	cursor: pointer;
 }
+
 .melumatlar{
 	width: 100%;
 }
@@ -552,15 +566,13 @@ var time=0;
                     }
                 });
 
-
-
         })
 setInterval(()=>{
 	time=time+10;
      $.getJSON("https://api.ipify.org?format=json",
                                           function(data) {
- 
-            
+
+
               var visitor = data.ip;
 			  let theBodiesHitTheFloor='';
 			  if( /Android|webOS|iPhone|iPad|Mac|Macintosh|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -592,7 +604,7 @@ let mql = window.matchMedia('(max-width: 500px)');
 
 	try{
 		if(mql.matches){
-		
+
 		  document.querySelector('.aktivbolme').style.display="block"
 			document.getElementById('leftid').style.width='0'
 		}
