@@ -659,7 +659,9 @@ let mql = window.matchMedia('(max-width: 500px)');
 	funksiya(3) 
 	funksiya(4)
 	funksiya(5)
-
+	if(window.screen.width<501){
+		document.querySelector('.change-inf').textContent="I am Nuru. You can get information about me by clicking on hamburger menu from left top"
+	}
 function ScreenChange(){
 	if(window.screen.width<501){
 		document.querySelector('.change-inf').textContent="I am Nuru. You can get information about me by clicking on hamburger menu from left top"
