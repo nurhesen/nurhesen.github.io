@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5.0, minimum-scale=1">
 	<title>Cv | Nuru Hasanov</title>
 </head>
-<body onresize="ScreenChange()">
+<body>
 	
 
 	<style>
@@ -345,11 +345,9 @@
 
 <div class="aktivbolme">
 	<h2>Motivation</h2>
-	<p style="max-width: 500px"><strong>Hi. Welcome to my CV</strong> 
-		<br><div class="change-inf">
-			I am Nuru. 
-		 You can get information about me by clicking sections on the left side
-		</div>  </p>
+	<p style="max-width: 500px"><strong>Hi. Welcome to my CV.</strong> 
+		<br>I am Nuru. 
+		 You can get information about me by clicking sections on the left side  </p>
 </div>
 
 
@@ -390,7 +388,6 @@
 }
 body{
 	margin: 0;
-	font-family:Times
 }
 .daire{
 	border-radius: 50%;
@@ -417,6 +414,7 @@ body{
 
 .lefts {
     color: white;
+    background-color: #2E323E;
     width: 30%;
     display: inline-flex;
     flex-direction: column;
@@ -425,7 +423,6 @@ body{
     position: sticky;
     top: 0;
     height: 100vh;
-    background-color: #28394e;
 }
 .profsekli{
 	border-radius: 50%;
@@ -483,12 +480,12 @@ img.slideimage {
     z-index: -1;
     top: 0;
     left: 0;
+    background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 10px;
 	position: absolute;
 	z-index: 100;
-    background-color: #28394e;
   }
 
   .gamflex{
@@ -508,7 +505,7 @@ img.slideimage {
 
 }
 
-@media only screen and (min-width:501px){
+@media only screen and (min-width:500px){
 .lefts{
 	width: 30% !important;
 }
@@ -521,7 +518,7 @@ img.slideimage {
 
 }
 
-@media only screen and (min-width:501px) and (max-width:700px){
+@media only screen and (min-width:500px) and (max-width:700px){
 	.skills{
 		font-size: 0.75rem;
 	}
@@ -657,17 +654,8 @@ let mql = window.matchMedia('(max-width: 500px)');
 	funksiya(3) 
 	funksiya(4)
 	funksiya(5)
-	if(window.screen.width<501){
-		document.querySelector('.change-inf').textContent="I am Nuru. You can get information about me by clicking on hamburger menu from left top"
-	}
-function ScreenChange(){
-	if(window.screen.width<501){
-		document.querySelector('.change-inf').textContent="I am Nuru. You can get information about me by clicking on hamburger menu from left top"
-	}else{
-		document.querySelector('.change-inf').textContent="I am Nuru. You can get information about me by clicking sections on the left side"
 
-	}
-}
+
 </script>
 <style>
 .flex-column{
@@ -679,9 +667,6 @@ function ScreenChange(){
 span.gambaga {
     padding-left: 10px;
 }
-	.skills:hover{
-	color:#a9b6c5	
-	}
 </style>
 
 </body>
